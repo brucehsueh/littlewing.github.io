@@ -1,70 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bruce Hsueh | iOS Developer</title>
-<style>
-body{
-margin:0;
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial;
-background:#ffffff;
-color:#111;
-}
-.container{
-max-width:1000px;
-margin:auto;
-padding:80px 20px;
-}
-h1{font-size:48px;margin-bottom:10px;}
-.subtitle{font-size:22px;color:#666;margin-bottom:60px;}
-.section{margin-bottom:80px;}
-.card{
-border:1px solid #eee;
-border-radius:16px;
-padding:30px;
-transition:.2s;
-}
-.card:hover{
-box-shadow:0 10px 30px rgba(0,0,0,.06);
-}
-.button{
-display:inline-block;
-margin-top:20px;
-padding:10px 20px;
-border-radius:8px;
-text-decoration:none;
-background:black;
-color:white;
-}
-.footer{
-margin-top:100px;
-font-size:14px;
-color:#888;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>littleWing</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #fafafa;
+      color: #111;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 120px 24px;
+    }
+
+    section {
+      margin-bottom: 160px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    section:nth-child(2) { animation-delay: 0.2s; }
+    section:nth-child(3) { animation-delay: 0.4s; }
+    section:nth-child(4) { animation-delay: 0.6s; }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      font-size: 56px;
+      font-weight: 600;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
+    }
+
+    .tagline {
+      font-size: 22px;
+      color: #555;
+      max-width: 600px;
+    }
+
+    h2 {
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 40px;
+    }
+
+    .about p {
+      font-size: 20px;
+      color: #333;
+      max-width: 600px;
+    }
+
+    .works {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    .work-item h3 {
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .work-item p {
+      font-size: 16px;
+      color: #666;
+      max-width: 520px;
+    }
+
+    .contact a {
+      text-decoration: none;
+      color: #111;
+      border-bottom: 1px solid #111;
+      padding-bottom: 2px;
+      transition: opacity 0.3s ease;
+    }
+
+    .contact a:hover {
+      opacity: 0.6;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #aaa;
+      padding-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 40px;
+      }
+
+      .container {
+        padding: 100px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-<h1>littleWing</h1>
-<div class="subtitle">
-iOS Developer · Utility & Productivity Apps
-</div>
 
-<div class="section">
-<h2>Featured App</h2>
-<div class="card">
-<h3>淨值捕手</h3>
-<p>台股 ETF 淨值與折溢價追蹤工具。</p>
-<a class="button" href="navhunter.html">View App</a>
-</div>
-</div>
+  <div class="container">
 
-<div class="footer">
-© 2026 littleWing<br>
-Contact: bruce.hsueh@gmail.com
-</div>
+    <!-- Hero -->
+    <section>
+      <h1>littleWing</h1>
+      <p class="tagline">
+        I design and build thoughtful digital experiences.
+      </p>
+    </section>
 
-</div>
+    <!-- About -->
+    <section class="about">
+      <h2>About</h2>
+      <p>
+        Independent developer focused on clarity, minimalism,
+        and building products that feel calm, intentional,
+        and quietly powerful.
+      </p>
+    </section>
+
+    <!-- Works -->
+    <section>
+      <h2>Selected Works</h2>
+
+      <div class="works">
+
+        <div class="work-item">
+          <h3>Project One</h3>
+          <p>A minimal tool designed to remove friction and enhance focus.</p>
+        </div>
+
+        <div class="work-item">
+          <h3>Project Two</h3>
+          <p>A clean automation system built for efficiency and simplicity.</p>
+        </div>
+
+        <div class="work-item">
+          <h3>Project Three</h3>
+          <p>An experiment in digital craftsmanship and quiet design.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>
+        <a href="mailto:bruce.hsueh@gmail.com">bruce.hsueh@gmail.com</a>
+      </p>
+    </section>
+
+  </div>
+
+  <footer>
+    © 2026 littleWing
+  </footer>
+
 </body>
 </html>
